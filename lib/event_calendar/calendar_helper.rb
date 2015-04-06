@@ -160,7 +160,7 @@ module EventCalendar
       # go through a week at a time, until we reach the end of the month
       while(last_day_of_week <= last_day_of_cal)
         cal << %(<div class="ec-row" style="top: #{top}px; height: #{row_heights[row_num]}px;">)
-        top += row_heights[row_num]
+        top += row_heights[row_num] if row_heights[row_num]
 
         # this weeks background table
         cal << %(<table class="ec-row-bg" cellpadding="0" cellspacing="0">)
